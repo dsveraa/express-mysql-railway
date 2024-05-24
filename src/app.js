@@ -1,5 +1,6 @@
 import express from 'express'
 import {pool} from './db.js'
+import {PORT} from './config.js'
 
 const app = express()
 
@@ -19,5 +20,5 @@ app.get('/create', async (req, res) => {
     res.json(result)
 })
 
-app.listen(3000)
-console.log('Server on port 3000')
+app.listen(PORT)
+console.log('Server on port', PORT)
